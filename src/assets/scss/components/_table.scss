@@ -1,0 +1,170 @@
+.table td,
+.table thead th {
+  vertical-align: middle !important;
+}
+
+.table:not(.table-borderless) thead th {
+  border-bottom: 1px solid #dedede !important;
+}
+
+.table {
+  &.table-sm {
+    tr td,
+    tr th {
+      padding: 1rem;
+    }
+  }
+  &.table-md {
+    tr td,
+    tr th {
+      padding: 1rem;
+    }
+  }
+  &.table-lg {
+    tr td,
+    tr th {
+      padding: 1.3rem;
+    }
+  }
+}
+
+.dataTable-table {
+  @extend .table;
+
+  thead {
+    tr {
+      th {
+        padding: 0.5rem !important;
+      }
+      td {
+        padding: 0.5rem !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      th {
+        padding: 0.5rem !important;
+      }
+      td {
+        padding: 0.5rem !important;
+      }
+    }
+  }
+  tfoot {
+    tr {
+      th {
+        padding: 0.5rem !important;
+      }
+      td {
+        padding: 0.5rem !important;
+      }
+    }
+  }
+}
+
+.dataTable-container {
+  overflow-x: auto;
+}
+.dataTables_length {
+  margin-bottom: 0.5rem;
+}
+
+.rdt_TableCell {
+  color: $table-text;
+}
+.rdt_TableCol {
+  color: $table-text;
+}
+.react-select-container {
+  background-color: $react-select;
+  color: $react-select-text;
+  .react-select__control {
+    background-color: $react-select;
+    border-color: $react-border;
+    .react-select__single-value {
+      color: $react-select-text;
+      .react-select__indicators {
+        color: $react-select-text;
+      }
+    }
+  }
+  .react-select__menu {
+    background-color: $react-select;
+    color: $react-select-text;
+    .react-select__option:hover {
+      background-color: #8a8aa4;
+      opacity: 0.7;
+      color: $react-select-text;
+    }
+    .react-select__option {
+      background-color: $react-select;
+      color: $react-select-text;
+    }
+    .react-select__option--is-selected {
+      background-color: $react-select-menu;
+      color: $white;
+    }
+  }
+}
+.rdt_Pagination {
+  color: $data-table;
+}
+.rdt_Pagination {
+  color: $data-table;
+}
+.rdt_Pagination {
+  color: $data-table;
+}
+.rdt_Pagination {
+  background-color: $data-table-select-c;
+}
+.rdt_Pagination #pagination-first-page {
+  color: $data-table !important;
+  fill: $data-table !important;
+}
+.rdt_Pagination #pagination-previous-page {
+  color: $data-table !important;
+  fill: $data-table !important;
+}
+
+.rdt_Pagination #pagination-next-page {
+  color: $data-table !important;
+  fill: $data-table !important;
+}
+.rdt_Pagination #pagination-last-page {
+  color: $data-table !important;
+  fill: $data-table !important;
+}
+
+.rdt_Pagination select[aria-label="Rows per page:"] option {
+  color: $data-table-select-c !important;
+}
+.jttXRL:disabled {
+  fill: $data-table-arrow-f !important;
+}
+.jttXRL {
+  fill: $data-table-arrow-f !important;
+}
+.kcATSI {
+  fill: $data-table-arrow-f !important;
+}
+.kcATSI:disabled {
+  fill: $data-table-arrow-f !important;
+}
+
+.rdt_TableHeadRow {
+  background-color: $data-table-header !important;
+}
+
+.border-wrapper {
+  border: 1px solid $border-wrapper !important;
+}
+
+.form-control:disabled {
+  background-color: $input-background !important;
+}
+
+.custom-label {
+  color: $fillter-color !important;
+}
