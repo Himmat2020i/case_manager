@@ -1,0 +1,27 @@
+.input-container {
+  width: 100%;
+  border: 2px;
+  margin-top: 1rem;
+  border-width: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+}
+
+.input-form {
+  border: none;
+  flex: auto;
+  width: 80%;
+  margin-left: 0px;
+  display: inline-flexbox;
+}
+
+.prifix {
+  width: 5%;
+  justify-content: start;
+}
+
+.subfix {
+  width: 5%;
+  justify-content: end;
+}

@@ -1,11 +1,7 @@
 const THEME_KEY = "theme";
 
 function toggleDarkTheme() {
-  setTheme(
-    document.documentElement.getAttribute("data-bs-theme") === "dark"
-      ? "light"
-      : "dark"
-  );
+  setTheme(document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark");
 }
 
 /**
@@ -40,9 +36,7 @@ function initTheme() {
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   //Register change listener
-  mediaQuery.addEventListener("change", (e) =>
-    setTheme(e.matches ? "dark" : "light", true)
-  );
+  mediaQuery.addEventListener("change", (e) => setTheme(e.matches ? "dark" : "light", true));
   return setTheme(mediaQuery.matches ? "dark" : "light", true);
 }
 
