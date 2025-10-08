@@ -9,10 +9,9 @@ export const adminMenu = [
     url: "/admin",
     icon: "pi pi-user"
   },
-
   {
     title: "Authority",
-    url: "/authority",
+    url: "/authority/caselist",
     icon: "pi pi-home"
   }
 ];
