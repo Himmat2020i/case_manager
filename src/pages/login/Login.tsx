@@ -5,7 +5,7 @@ import { Button, Form } from "react-bootstrap";
 import TextInputController from "../../controller/TextInputController";
 
 const Login = () => {
-  const { control, handleSubmit, onLoginPress } = useLogin();
+  const { control, onLoginPress } = useLogin();
 
   return (
     <div id="auth">
@@ -24,7 +24,7 @@ const Login = () => {
                     method="POST"
                     id="formLogin"
                     className="mb-3"
-                    onSubmit={handleSubmit(onLoginPress)}>
+                    onSubmit={onLoginPress}>
                     <TextInputController
                       name="email"
                       control={control}

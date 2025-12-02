@@ -1,6 +1,7 @@
+/* eslint-disable no-control-regex */
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { passwordRegex, REQUIRED, VALID } from "../constants/yupConstants";
+import { REQUIRED, VALID } from "../constants/yupConstants";
 
 export const loginFormSchema = yupResolver(
   yup
@@ -10,8 +11,12 @@ export const loginFormSchema = yupResolver(
         .string()
         .trim()
         .required(REQUIRED.password)
-        .min(8, VALID.passLimit)
-        .matches(passwordRegex, VALID.specialChar)
+        .matches(/^[\x00-\x7F]+$/, VALID.password),
+      "g-recaptcha-response": yup
+        .string()
+        .nullable()
+        .notRequired()
+        .transform((value) => (value === "" ? null : value))
     })
     .required()
 );

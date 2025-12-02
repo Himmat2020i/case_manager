@@ -4,12 +4,8 @@ import { Controller, FieldValues } from "react-hook-form";
 import ErrorMessage from "../components/errorMessage/ErrorMessage";
 import { TextInputControllerProps } from "../interface/inputTextInterface";
 
-const TextInputController = <T extends FieldValues>({
-  name,
-  control,
-  placeholder,
-  ...props
-}: TextInputControllerProps<T>) => {
+const TextInputController = <T extends FieldValues>(props: TextInputControllerProps<T>) => {
+  const { name, control, placeholder, ...prop } = props;
   return (
     <div className="mb-3">
       <Controller
@@ -22,7 +18,7 @@ const TextInputController = <T extends FieldValues>({
               value={value}
               onChange={onChange}
               placeholder={placeholder}
-              {...props}
+              {...prop}
             />
             {error && <ErrorMessage message={error?.message} />}
           </>
